@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>Learn Grid</title>
+  <style>
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background: grey;
+}
+.item {
+  min-height: 10px;
+  min-width: 10px;
+}
+.item-a {
+  background: red;
+}
+.item-b {
+  background: green;
+}
+.item-c {
+  background: blue;
+}
+.item-d {
+  background: yellow;
+}
+.item-none {
+  background: orange;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  grid-gap: 10px 15px;
+  width: 100%;
+  height: 100%;
+}
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="item item-a"></div> 
+  <div class="item item-b">
+  	<p class="sub-item"></p>
+  </div>
+  <div class="item item-c"></div>
+  <div class="item item-d"></div>
+  <div class="item item-none"></div>
+</div>
+</body>
+</html>
